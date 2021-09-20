@@ -19,6 +19,6 @@
     }
     $subject = "=?utf-8?B?".base64_encode("Сообщение из сайта")."?="; // тема сообщения
     $headers = "From: $email\r\n\Reply-to: $email\r\n\Content-type: text/html; charset=utf-8\r\n";
-    mail('spudkomixail@yandex.ru', $subject, $message, $headers)
-    header(Location: /about.php)
+    mail('spudkomixail@yandex.ru', $subject, $message, $headers);
+    header('Location: /about.php');
 ?>

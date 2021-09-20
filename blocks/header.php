@@ -12,14 +12,26 @@
                 <li><a href="#" class="nav-link px-2 text-white">Страница 3</a></li>
             </ul>
 
+
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                 <input type="search" class="form-control form-control-dark" placeholder="Поиск..." aria-label="Search">
             </form>
 
+            <?php
+            if($_COOKIE['user'] == 'Success'):
+            ?>
+            <a class="btn btn-outline-primary" href="/auth.php">Кабинет пользователя</a>
+            <?php
+            else:
+            ?>
             <div class="text-end">
-                <button type="button" class="btn btn-outline-light me-2">Войти</button>
+                <button type="button" class="btn btn-outline-light me-2" href="/auth.php">Войти</button>
                 <button type="button" class="btn btn-warning">Регистрация</button>
             </div>
+
+            <?php
+            endif;
+            ?>
         </div>
     </div>
 </div>
